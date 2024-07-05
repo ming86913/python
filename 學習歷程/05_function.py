@@ -45,7 +45,7 @@ def add2(*args):
 
 print('加總:', add2(1, 2, 2))
 
-module.foo()
+
 # 呼叫函式
 # print('還沒呼叫函式')
 # myfm01()
@@ -66,3 +66,5 @@ module.foo()
 # print('add(1) = ', add(1))
 # print('add(2) = ', add(1, 2))
 # print('add(3) = ', add(1, 2, 3))
+
+module.foo()  # 將函式存在函式庫中呼叫，透過 import filename.py 才可呼叫
