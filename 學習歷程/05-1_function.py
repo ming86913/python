@@ -1,4 +1,4 @@
-import Day5_module as module
+import Fumciot_module as module
 # 函式 : 沒有retrun 程式會在最後一行自行編譯，return 沒給值會回傳 None & 沒有 return 會回傳 None
 # 定義函式 -> def 函式名稱() or def 函式名稱(參數,參數...) & 呼叫函式 -> 函式名稱()
 
@@ -67,4 +67,4 @@ print('加總:', add2(1, 2, 2))
 # print('add(2) = ', add(1, 2))
 # print('add(3) = ', add(1, 2, 3))
 
-module.foo()  # 將函式存在函式庫中呼叫，透過 import filename.py 才可呼叫
+module.Hello()  # 將函式存在函式庫中呼叫，透過 import filename.py 才可呼叫

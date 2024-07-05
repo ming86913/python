@@ -1,5 +1,5 @@
-def foo():
-    print('hello,module')
+def Hello():
+    print('hello,function module')
 
 
 def add(*args):
