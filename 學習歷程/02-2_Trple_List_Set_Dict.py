@@ -13,25 +13,21 @@ print('f3 = ', f3)  # false
 print('f4 = ', f4)  # true
 print('f5 = ', f5)  # false
 
-
-# 練習1. 華氏溫度轉換攝氏溫度  $C=(F - 32) \div 1.8$。
-print('-' * 25, '練習1. 華氏溫度轉換攝氏溫度', '-' * 25)
-f = float(input('請輸入華氏溫度 : '))
-c = (f - 32)/1.8
-print('攝氏溫度 = ', c)
-print('攝氏溫度 = %.1f' % c)  # %.1f是一個佔位浮 與 %d 概念相同，使用 %.1f 是限制 float 只有1位數
-print(f'{f:.1f}華氏度 = {c:.1f}攝氏度')
-
-
-# 練習2. 圓周長=直徑 * 圓周率,圓面積=半徑*半徑*圓周率
-print('-' * 25, '練習2. 圓的計算', '-' * 25)
-radius = float(input('請輸入半徑 :'))
-perimeter = radius * 2 * 3.14
-area = radius * radius * 3.14
-print('圓周長 = %.2f' % perimeter)
-print('圓面積 = %.2f' % area)
-
 # 數組 Tuple () ,  列表 List [] ,  集合 Set , 字典 Dict {} .  前三種非常相似，不同的點在於 [集合不會包含重複資料]
+
+# ----數組
+print('-' * 25, '數組 Tuple', '-' * 25)
+tuple1 = (1, 2, 3, 4, 5)
+tuple2 = (2, 2, 3)  # 重複值，會顯示
+print(tuple1)
+print(tuple2)
+
+# ----列表
+print('-' * 25, '列表 List', '-' * 25)
+list01 = [0, 1, 1]  # 重複值，會顯示
+print('List : ', list01)
+print('List[1] : ', list01[1])
+
 # ----集合 , 各種建立方式Set operation
 print('-' * 25, '集合建立方式', '-' * 25)
 set0 = set()              # 建立空集合
@@ -44,7 +40,10 @@ print(set2)
 print(set3)
 print(set4)
 
-# 運算 , 交集 & , 聯集 | , 減集 -  , 反交集 ^ ,  測試左集合是否為右集合的父集 > , 測試左集合是否為右集合的子集 <
+dict01 = {'name': 'jeffrey', 'age': '26'}
+print(dict01['name'])
+
+# 集合運算 , 交集 & , 聯集 | , 減集 -  , 反交集 ^ ,  測試左集合是否為右集合的父集 > , 測試左集合是否為右集合的子集 <
 print('-' * 25, '集合運算', '-' * 25)
 s1 = {3, 4, 5}
 s2 = {4, 5, 6, 7}
@@ -56,7 +55,7 @@ s2 = {4, 5, 6, 7}
 # s3 = s1 < s2
 # print(s3)
 
-# 函數
+# 集合函數
 # set1.clear()
 set1 = {2, 4, 6, 8}
 print(len(set1))  # 長度 1 開始計算
@@ -64,14 +63,14 @@ print(min(set1))  # 最小值
 print(max(set1))  # 最大值
 print(sum(set1))  # 集合加總
 
-# 判斷
+# 集合判斷
 set1 = {2, 4, 6, 8}
 print(2 in set1)
 print(3 in set1)
 print(2 not in set1)
 print(3 not in set1)
 
-# for迴圈列印集合 , *集合和串列數組不同, 不可以使用索引來擷取特定元素*
+# 集合for迴圈列印 , *集合和串列數組不同, 不可以使用索引來擷取特定元素*
 set1 = {2, 4, 6, 8}
 for i in set1:
     print(i, end=' ')

@@ -23,7 +23,8 @@ def sum(a, b):
 
 
 def multiply(n1, n2):
-    print('multiply = ', n1 * n2)
+    # print('multiply = ', n1 * n2)
+    return n1*n2
 
 
 # add(a=0,b=0.c=0) 明確定義，其實有更好的方案。因為可能會有0個或多個進行運算，具體是多少由調用者決定，程式設計者是一無所知的
@@ -56,15 +57,57 @@ print('加總:', add2(1, 2, 2))
 # value = sum(3, 4)
 # print('函式外層 sum 回傳值 : ', value)
 
-# value = multiply(3, 4)
-# if value == 'none':
-#     print('函式外層 multiply 回傳值 : ', value)
-# else:
-#     print('回傳值 None =', value)
+value = multiply(3, 4) + multiply(10, 5)
+if value != 'none':
+    print('呼叫函式結果 multiply 回傳值 : ', value)
+else:
+    print('回傳值 None =', value)
 
 # print('add() = ', add())
 # print('add(1) = ', add(1))
 # print('add(2) = ', add(1, 2))
 # print('add(3) = ', add(1, 2, 3))
 
-module.Hello()  # 將函式存在函式庫中呼叫，透過 import filename.py 才可呼叫
+# 呼叫函式庫 透過 import
+# module.Hello()  # 將函式存在函式庫中呼叫，透過 import filename.py 才可呼叫
+
+
+# 重複程式包裝 : 同樣邏輯可重複利用
+
+# 兩個迴圈的程式相差無幾，僅是range 的差異。可以透過函式將似的程式包裝起來，以參數設定就可以重複使用不必重複寫
+# 1. 1~10 累加
+# sum = 0
+# for i in range(1, 11):
+#     sum += i
+# print(sum)
+# 2. 1~20 累加
+# sum = 0
+# for i in range(1, 21):
+#     sum += i
+# print(sum)
+
+
+# 一般累加寫法
+def calculate01(max):  # (1) = 1 or range(1,5) = 0~4 or (1,5,2) = 1,3
+    sum = 0
+    for i in range(1, max+1):
+        sum += i
+        print('i=', i)
+    return sum
+
+
+# 特殊用途
+def calculate02(*i0):  # (1) = 1 or range(1,5) = 0~4 or (1,5,2) = 1,3
+    sum = 0
+    print('i0 = ', i0)
+    for i in range(*i0):
+        sum += i
+        print('i=', i)
+    return sum
+
+
+# 解壓縮range : *range   = list(range(1, 10, 2)) 轉換List , 差別一個是
+# print('range=', * range(1, 5, 2))  # 1 ,3 不包含5
+print('1 ~ 10 累加 = ', calculate01(10))
+print('1 ~ 5 奇數累加 = ', calculate02(1, 6, 2))
+# print('1 ~ 20累加 = ', calculate(1, 21))
