@@ -106,8 +106,10 @@ def calculate02(*i0):  # (1) = 1 or range(1,5) = 0~4 or (1,5,2) = 1,3
     return sum
 
 
-# 解壓縮range : *range   = list(range(1, 10, 2)) 轉換List , 差別一個是
-# print('range=', * range(1, 5, 2))  # 1 ,3 不包含5
 print('1 ~ 10 累加 = ', calculate01(10))
+# 如何知道range(*i0)的值?  -> 參考 *range  &  list(range)
 print('1 ~ 5 奇數累加 = ', calculate02(1, 6, 2))
+# 解壓縮range : *range   = list(range(1, 10, 2)) 轉換List , 差別一個是
+print('*range = ', * range(1, 6, 2))  # 1 ,3 不包含5
+print('list range = ', list(range(1, 6, 2)))
 # print('1 ~ 20累加 = ', calculate(1, 21))
