@@ -16,6 +16,7 @@ print('圓周長 = %.2f' % perimeter)
 print('圓面積 = %.2f' % area)
 
 # 練習3. 平方根 for & if
+print('-' * 25, '練習3. 平方根', '-' * 25)
 n = int(input('請輸入整數'))  # 使用者輸入資料且轉換成整數，不使用int()轉換會是type str, (假設都是輸入整數)
 for i in range(n):
     if i*i == n:

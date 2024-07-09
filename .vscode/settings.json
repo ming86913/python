@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./學習歷程/module"
+    ]
+}
