@@ -24,3 +24,28 @@ for i in range(n):
         break  # 用 break 強制結束迴圈時,不會執行 else 區塊
 else:
     print('沒有整數平方根')
+
+
+# 建立簡易計算機
+
+num1 = float(input('請輸入數字1 : '))
+operator = str(input('請輸入運算符號(限定 + , - , * , / ): '))
+num2 = float(input('請輸入數字2 : '))
+num = 0
+flag = ''
+
+match operator:
+    case '+':
+        num = num1 + num2
+    case '-':
+        num = num1 - num2
+    case '*':
+        num = num1 * num2
+    case '/':
+        num = num1 / num2
+    case _:  # 如果上面的case 都沒有命中，則執行這行，類似於Switch的default
+        flag = 'X'
+        print('輸入錯誤')
+
+if flag != 'X':
+    print(num)

@@ -24,7 +24,8 @@ print(tuple2)
 
 # ----列表
 print('-' * 25, '列表 List', '-' * 25)
-list01 = [0, 1, 1]  # 重複值，會顯示
+list01 = [0, 1, 2]  # 重複值，會顯示
+print(len(list01))  # 長度由1開始算，若取值由0開始
 print('List : ', list01)
 print('List[1] : ', list01[1])
 
