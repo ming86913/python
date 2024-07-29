@@ -9,7 +9,7 @@ class FirstClass(object):  # 繼承 python 最上層的object類別
         print('This is function1')
 
     def fun2(self, num1=0, num2=0):
-        self.fun1()
+        self.fun1()  # 在fun2()調用fun1()
         return num1 * 2 + num2
 
     @classmethod
@@ -22,8 +22,6 @@ class FirstClass(object):  # 繼承 python 最上層的object類別
 
 
 class Person:
-    # 類別中定義屬性(Property)
-
     # 在類別中使用函數(Method)
     def __init__(self, name, age):  # 稱為constuctor,建構方法。每次使用該類別(Class)建立物件時都會呼叫該函式
         self.name = name
@@ -35,6 +33,7 @@ class Person:
 
 
 class People:  # 公/私屬性 & 私有方法範例 (私有屬性 & 私有方法 都是在前面加兩個 _)
+    # 類別中定義屬性(Property)
     height = 180  # Property
     weight = 69   # Property
     name = 'unknown'
@@ -123,21 +122,21 @@ class Child(Father, Mother):  # 原本是放Object 現在改為要繼承的Class
 
 
 # --------------------------FirstClass-------------------------
-hi = FirstClass('jack')  # 建立一個名為 hi 的類別 , 自訂初始化的值
-hi.fun1()
-print(hi.fun2(1, 2))  # 傳入1,2參數進去 fun2 ， 不傳參數會默認 num1 = 0 , num2 = 0
-# print(hi.fun2(1,2)) == print(hi.fun2(num1 = 1, num2 = 2))
-FirstClass.class_method()
-FirstClass.static_method()
+# hi = FirstClass('jack')  # 建立一個名為 hi 的類別 , 自訂初始化的值
+# hi.fun1()
+# print(hi.fun2(1, 2))  # 傳入1,2參數進去 fun2 ， 不傳參數會默認 num1 = 0 , num2 = 0
+# # print(hi.fun2(1,2)) == print(hi.fun2(num1 = 1, num2 = 2))
+# FirstClass.class_method()
+# FirstClass.static_method()
 
-# --------------------------Person-------------------------
+# --------------------------People-------------------------
 # bill = People()
-# bill = People(170, 72, 'Jack', n2=None)
-# bill.BMI()
+bill = People(170, 72, 'Jack', n2=None)
+bill.BMI()
 # bill.__private()  # 無法直接調用私有方法、私有屬性，會出現 AttributeError 的錯誤訊息，僅能透過Class中自行調用。 (其實可以調用但不推薦)
 
-# bmi_value = People.calculate_BMI(170, 72)
-# print('靜態方法 BMI', bmi_value)
+bmi_value = People.calculate_BMI(170, 72)
+print('靜態方法 BMI', bmi_value)
 
 # --------------------------Person-------------------------
 # p1 = Person("John", 36)

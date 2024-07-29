@@ -2,8 +2,6 @@ import Fumciot_module as module
 # 函式 : 沒有retrun 程式會在最後一行自行編譯，return 沒給值會回傳 None & 沒有 return 會回傳 None
 # 定義函式 -> def 函式名稱() or def 函式名稱(參數,參數...) & 呼叫函式 -> 函式名稱()
 
-# https://www.youtube.com/watch?v=OOJmhezLd4o&list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&index=10
-
 # 定義函式
 
 
